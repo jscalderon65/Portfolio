@@ -1,0 +1,11 @@
+@import './Base/base';
+@import './Base/settings';
+.example-box{
+    margin:20px auto;
+    border: solid;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
