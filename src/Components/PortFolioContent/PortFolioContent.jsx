@@ -12,8 +12,8 @@ const PortFolioContent = () => {
   console.log(Data);
   return (
     Data && Data[0].PublicProjects.map((item) => (
-      <div key={item} className="headline load-hidden example-box">
-        {item}
+      <div key={item.id} className="headline load-hidden example-box">
+        {item.name}
       </div>
     ))
   );

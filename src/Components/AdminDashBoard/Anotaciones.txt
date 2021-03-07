@@ -1,0 +1,72 @@
+import React, { useEffect, useState} from "react";
+import { firebase } from "../../Firebase/FirebaseConfig";
+import { useOnSnapshotCollection } from "my-customhook-collection";
+const AdminDashBoard = () => {
+  const db = firebase.firestore();
+  const refColl = db.collection("Portfolio");
+  const [Data] = useOnSnapshotCollection(refColl);
+  const [repositoryValues, setRepositoryValues] = useState([]);
+  const [repositorys, setRepositorys] = useState([]);
+  Data&&console.log("FirebaseData",Data[0].PublicProjects,"LocalData",repositoryValues);
+  const onChangeInput = (e) => {
+  console.log(e.target.checked);
+  if(!repositoryValues.find(item=>item.id===JSON.parse(e.target.value).id)){
+    setRepositoryValues([...repositoryValues, JSON.parse(e.target.value)]);
+  }else if(!e.target.checked){
+    setRepositoryValues(repositoryValues.filter(item=>item.id!==JSON.parse(e.target.value).id));
+  }
+  };
+  useEffect(() => {
+    let isSubscribed = true;
+    const getGithubData = async () => {
+      try {
+        const resp = await fetch(
+          "https://api.github.com/users/jscalderon65/repos"
+        );
+        const RepositoryData = await resp.json();
+        return RepositoryData;
+      } catch (error) {
+        alert(error);
+      }
+    };
+    getGithubData().then(data=>{
+      if(isSubscribed){
+        setRepositorys(data);
+      }
+      console.log(data)});
+      return () => isSubscribed = false;
+  }, []);
+
+  const onSubmitData = (e) => {
+    e.preventDefault();
+    db.doc("/Portfolio/GithubProjects").set({
+      PublicProjects: repositoryValues,
+    });
+  };
+  return (
+    <div style={{padding:"70px"}}>
+      <form onSubmit={onSubmitData}>
+        {repositorys &&
+          repositorys.map((repository) => {
+            return(<div key={repository.id}>
+              <input
+                type="checkbox"
+                name={repository.name}
+                onChange={onChangeInput}
+                value={JSON.stringify(repository)}
+              />
+              <label htmlFor={repository.name}>{repository.name}</label>
+            </div>)
+          })}
+          <button>Sisas</button>
+      </form>
+      <h1>LocalData</h1>
+      {repositoryValues.length}
+      {repositoryValues.map(item=><li key={item.id}>{item.name}</li>)}
+      <h1>FirebaseData</h1>
+      {Data&&Data[0].PublicProjects.length}
+      {Data&&Data[0].PublicProjects.map(item=><li key={item.id}>{item.name}</li>)}
+    </div>
+  );
+};
+export default AdminDashBoard;
