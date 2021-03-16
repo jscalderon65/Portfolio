@@ -22,7 +22,13 @@ const AdminDashBoard = memo(() => {
     const getGithubData = async () => {
       try {
         const resp = await fetch(
-          "https://api.github.com/users/jscalderon65/repos"
+          "https://api.github.com/users/jscalderon65/repos",
+          {
+            method: "GET",
+            headers: {
+              "Accept":"application/vnd.github.mercy-preview+json"
+            },
+          }
         );
         const RepositoryData = await resp.json();
         return RepositoryData;

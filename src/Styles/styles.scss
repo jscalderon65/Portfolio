@@ -1,5 +1,64 @@
 @import './Base/base';
 @import './Base/settings';
+
+.container{
+    margin-top:60px;
+    margin-left: 40vw;
+    width:60vw;
+}
+
+.Menu{
+    height: 100vh;
+    width: 40vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Navbar{
+    overflow: hidden;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+}
+
+.Footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background-color: #111;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: space-between;
+
+}
+
+.Menu,.Footer,.Navbar>h1,a{
+    color:white;
+}
+
+@media(max-width:900px){
+    .container{
+        overflow-x: hidden;
+        margin-top:20px;
+        margin-left:0;
+        width:100vw;
+    }
+}
+
 .example-box{
     margin:20px auto;
     border: solid;
@@ -20,13 +79,12 @@
 }
 .pageBody{
     background: #212121;
+    overflow-y: hidden;
 }
 .transfer{
     margin:20px auto;
     display:flex;
     align-items:center;
-    flex-flow:column
+    flex-flow:column;
 }
-.phantomDiv{
-    height:100px;
-}
+

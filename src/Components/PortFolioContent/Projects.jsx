@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import { firebase } from "../../Firebase/FirebaseConfig";
 import { useOnSnapshotCollection } from "my-customhook-collection";
-import { GoogleAuth } from "../../Firebase/FirebaseAuth";
 import ScrollReveal from "scrollreveal";
-const PortFolioContent = () => {
+const Projects = () => {
   const db = firebase.firestore();
   const refColl = db.collection("Portfolio");
   const [Data] = useOnSnapshotCollection(refColl);
@@ -12,20 +11,15 @@ const PortFolioContent = () => {
   }, [Data]);
   console.log(Data);
   return (
-    <>
-      <button
-        style={{ textAlign: "center", width: "100%" }}
-        onClick={GoogleAuth}
-      >
-        Login
-      </button>
+    <div style={{justifySelf:"center",padding:"20px"}}>
       {Data &&
         Data[0].PublicProjects.map((item) => (
           <div key={item.id} className="headline load-hidden example-box">
             {item.name}
           </div>
         ))}
-    </>
+    </div>
   );
 };
-export default PortFolioContent;
+
+export default Projects;
