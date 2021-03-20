@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Navbar,
   Menu,
   Footer,
   Projects,
@@ -15,10 +14,7 @@ const PublicSwitch = () => {
   const MainMenu = mediaQuery ? (
     <Footer />
   ) : (
-    <>
-      <Navbar />
       <Menu />
-    </>
   );
   return (
     <div className="container">

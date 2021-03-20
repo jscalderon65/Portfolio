@@ -2,28 +2,43 @@ import React from "react";
 import { GoogleAuth } from "../../Firebase/FirebaseAuth";
 import { Button } from "antd";
 import { Link } from "react-router-dom";
+import {
+  HomeOutlined,
+  MailOutlined,
+  UserOutlined,
+  BookOutlined,
+} from "@ant-design/icons";
 import "antd/dist/antd.css";
 const Footer = () => {
   return (
     <div className="Footer">
-      <h1>
-        <Link to="/home">Home</Link>
-      </h1>
 
-      <h1>
-        <Link to="/about">About</Link>
-      </h1>
+        <Link className="Footer-item" to="/about">
+          <UserOutlined />
+          About me
+        </Link>
 
-      <h1>
-        <Link to="/projects">Projects</Link>
-      </h1>
 
-      <h1>
-        <Link to="/contact">Contact Form</Link>
-      </h1>
-      <Button type="primary" onClick={GoogleAuth}>
+
+        <Link className="Footer-item" to="/projects">
+          <BookOutlined />
+          Projects
+        </Link>
+      
+
+        <Link className="Footer-item" to="/home">
+          <HomeOutlined />
+          Home
+        </Link>
+      
+
+        <Link className="Footer-item" to="/contact">
+          <MailOutlined />
+          Contact
+        </Link>      
+{/*             <Button type="primary" onClick={GoogleAuth}>
         Login
-      </Button>
+      </Button> */}
     </div>
   );
 };

@@ -11,11 +11,13 @@ const Projects = () => {
   }, [Data]);
   console.log(Data);
   return (
-    <div style={{justifySelf:"center",padding:"20px"}}>
+    <div className="projects-container">
       {Data &&
         Data[0].PublicProjects.map((item) => (
           <div key={item.id} className="headline load-hidden example-box">
             {item.name}
+            <br/>
+            {item.topics.map(topic=><li key={topic}>{topic}</li>)}
           </div>
         ))}
     </div>

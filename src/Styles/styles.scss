@@ -2,25 +2,31 @@
 @import './Base/settings';
 
 .container{
-    margin-top:60px;
-    margin-left: 40vw;
-    width:60vw;
+    padding: 20px;
+    margin-left: $side-menu-width;
+    width: $content-width;
 }
 
 .Menu{
     height: 100vh;
-    width: 40vw;
+    width: $side-menu-width;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: #111;
     overflow-x: hidden;
-    padding-top: 20px;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:10px;
+    padding-right:10px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
+
+
+
 
 .Navbar{
     overflow: hidden;
@@ -38,18 +44,28 @@
     bottom: 0;
     width: 100vw;
     background-color: #111;
-    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     color: white;
     display: flex;
-    flex-flow: column;
-    align-items: space-between;
+    justify-content: space-between;
 
 }
 
+.Footer-item{
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    align-items: center;
+}
 .Menu,.Footer,.Navbar>h1,a{
     color:white;
 }
-
+.projects-container{
+    margin-bottom: 100px;
+}
 @media(max-width:900px){
     .container{
         overflow-x: hidden;
@@ -65,6 +81,7 @@
     height: 300px;
     width: 300px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
