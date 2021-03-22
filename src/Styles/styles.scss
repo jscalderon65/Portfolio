@@ -2,11 +2,18 @@
 @import './Base/settings';
 
 .container{
-    padding: 20px;
+    background-color:$primary;
+    color:white;
+    padding-top:100px;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-bottom:20px;
     margin-left: $side-menu-width;
     width: $content-width;
 }
-
+.container>div>h1{
+    color:white;
+}
 .Menu{
     height: 100vh;
     width: $side-menu-width;
@@ -18,14 +25,26 @@
     overflow-x: hidden;
     padding-top:20px;
     padding-bottom:20px;
-    padding-left:10px;
-    padding-right:10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
 
+.menu-item:hover{
+    border-top: solid 2px $light-grey;
+    border-bottom: solid 2px $light-grey;
+    color: white;
+    background:$dark-grey;
+}
+.menu-item{
+    border-top: solid 2px #111;
+    border-bottom: solid 2px #111;
+    transition: color 0.2s,background 0.2s,border-top 0.2s,border-bottom 0.2s;
+}
 
+.navLink{
+    background:$dark-grey;
+}
 
 
 .Navbar{
@@ -35,7 +54,7 @@
     top: 0;
     display: flex;
     justify-content: center;
-    width: 60vw;
+    width:100vw;
 }
 
 .Footer{
@@ -44,10 +63,6 @@
     bottom: 0;
     width: 100vw;
     background-color: #111;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -55,6 +70,8 @@
 }
 
 .Footer-item{
+    padding-top:20px;
+    padding-bottom:20px;
     display:flex;
     flex-direction: column;
     flex:1;
@@ -69,9 +86,10 @@
 @media(max-width:900px){
     .container{
         overflow-x: hidden;
-        margin-top:20px;
         margin-left:0;
         width:100vw;
+        padding:20px;
+        min-height: 100vh;
     }
 }
 

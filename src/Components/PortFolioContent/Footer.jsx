@@ -1,7 +1,7 @@
 import React from "react";
-import { GoogleAuth } from "../../Firebase/FirebaseAuth";
-import { Button } from "antd";
-import { Link } from "react-router-dom";
+/* import { GoogleAuth } from "../../Firebase/FirebaseAuth";
+import { Button } from "antd"; */
+import { NavLink } from "react-router-dom";
 import {
   HomeOutlined,
   MailOutlined,
@@ -12,30 +12,25 @@ import "antd/dist/antd.css";
 const Footer = () => {
   return (
     <div className="Footer">
-
-        <Link className="Footer-item" to="/about">
-          <UserOutlined />
-          About me
-        </Link>
-
-
-
-        <Link className="Footer-item" to="/projects">
-          <BookOutlined />
-          Projects
-        </Link>
-      
-
-        <Link className="Footer-item" to="/home">
+        <NavLink className="Footer-item menu-item" activeClassName="navLink" to="/home">
           <HomeOutlined />
           Home
-        </Link>
-      
+        </NavLink>
 
-        <Link className="Footer-item" to="/contact">
+        <NavLink className="Footer-item menu-item" activeClassName="navLink" to="/about">
+          <UserOutlined />
+          About
+        </NavLink>
+
+        <NavLink className="Footer-item menu-item" activeClassName="navLink" to="/projects">
+          <BookOutlined />
+          Projects
+        </NavLink>
+      
+        <NavLink className="Footer-item menu-item" activeClassName="navLink" to="/contact">
           <MailOutlined />
           Contact
-        </Link>      
+        </NavLink>      
 {/*             <Button type="primary" onClick={GoogleAuth}>
         Login
       </Button> */}

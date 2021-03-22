@@ -1,6 +1,6 @@
 import React from "react";
-import { Divider } from "antd";
-import { Link } from "react-router-dom";
+import { Image } from "antd";
+import { NavLink } from "react-router-dom";
 import {
   HomeOutlined,
   MailOutlined,
@@ -32,7 +32,8 @@ const routes = [
 ];
 const MenuItem = ({ route, icon, text }) => {
   return (
-    <Link
+    <NavLink activeClassName="navLink"
+      className="menu-item"
       style={{
         padding: "10px",
         display: "flex",
@@ -40,12 +41,17 @@ const MenuItem = ({ route, icon, text }) => {
       }}
       to={route}
     >
-      <div style={{     display: "flex",
-        alignItems: "center",flexDirection: "column",}}>
-        <div style={{  }}>{icon}</div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
+        <div>{icon}</div>
         {text}
       </div>
-    </Link>
+    </NavLink>
   );
 };
 const Menu = () => {
