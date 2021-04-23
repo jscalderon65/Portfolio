@@ -1,0 +1,16 @@
+.Projects-projects-card-container{
+    padding:20px 20px;
+    display: grid;
+    justify-content: center;
+    grid-auto-rows:300px;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill,minmax(300px,400px));
+}
+.Projects-projects-cards{
+    border-radius: 10px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.20);
+}

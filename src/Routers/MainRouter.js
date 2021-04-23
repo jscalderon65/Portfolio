@@ -9,7 +9,7 @@ const MainRouter = () => {
   return (
     <BrowserRouter>
       <div>
-        {isOn ? <PrivateSwitch /> : <PublicSwitch />}
+        {isOn? <PrivateSwitch /> : <PublicSwitch />}
       </div>
     </BrowserRouter>
   );

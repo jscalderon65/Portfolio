@@ -10,17 +10,24 @@ const Projects = () => {
     ScrollReveal().reveal(".headline", { delay: 150, reset: true });
   }, [Data]);
   console.log(Data);
-  return (
-    <div className="projects-container">
+  return Data && Data[0]?.PublicProjects ? (
+    <div className="Projects-projects-card-container">
       {Data &&
         Data[0].PublicProjects.map((item) => (
-          <div key={item.id} className="headline load-hidden example-box">
+          <div
+            key={item.id}
+            className="headline load-hidden Projects-projects-cards"
+          >
             {item.name}
-            <br/>
-            {item.topics.map(topic=><li key={topic}>{topic}</li>)}
+            <br />
+            {item.topics.map((topic) => (
+              <li key={topic}>{topic}</li>
+            ))}
           </div>
         ))}
     </div>
+  ) : (
+    <h1>Wait</h1>
   );
 };
 
