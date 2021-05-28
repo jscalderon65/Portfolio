@@ -1,0 +1,17 @@
+@import './MainContainer';
+.Navbar-container{
+  border:solid;
+  height: 100%;
+  width: $navbar-width; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  display:flex; 
+  justify-content: center;
+  align-items:center;
+  background-color: black;
+}
+.Navbar-container>h1{
+  color:white !important;
+}

@@ -1,0 +1,29 @@
+$navbar-width: 200px;
+$footer-height: 200px;
+.MainContainer-container{
+    display:grid;
+    grid-template-columns: $navbar-width 1fr;
+}
+.MainContainer-navbar{
+    border:solid;
+}
+.MainContainer-footer{
+    display:none;
+    width: 100vw;
+    margin:auto;
+    background-color: black;
+    color:white;
+}
+@media(max-width:600px){
+    .MainContainer-navbar{
+        display:none;
+    }
+    .MainContainer-footer{
+        display:block;
+    }
+    .MainContainer-container{
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr $footer-height;
+    } 
+}
