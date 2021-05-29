@@ -1,6 +1,9 @@
 import React from "react";
 import {
   Projects,
+  Home,
+  Navbar,
+  Footer
 } from "../Components";
 import { Switch, Route, Redirect } from "react-router-dom";
 const PublicSwitch = () => {
@@ -8,14 +11,11 @@ const PublicSwitch = () => {
     <Switch>
       <>
         <div className="MainContainer-container">
-          <div className="MainContainer-navbar">
-          <div className="Navbar-container"><h1>Navbar</h1></div>
-          </div>
+          <Navbar />
           <Route exact path="/projects" component={Projects} />
-          <Redirect to="/projects" />
-          <div className="MainContainer-footer">
-          <div className="Footer-container"><h1>Footer</h1></div>
-          </div>
+          <Route exact path="/home" component={Home} />
+          <Redirect to="/home" />
+          <Footer />
         </div>
       </>
     </Switch>

@@ -1,0 +1,133 @@
+.Home-container {
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
+  rgba(0, 0, 0, 0.5)),
+  url("./Assets/homeBackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.Home-main-text {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.Home-social-icons {
+  margin-top: 10px;
+  font-size: 40px;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+.Home-divider {
+  height: 1.5px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: blue;
+  background: linear-gradient(90deg, hsl(0, 0%, 20%), hsl(0, 0%, 70%), hsl(0, 0%, 20%));
+}
+.Home-main-text-description {
+  color: white;
+  text-align: justify;
+  font-size: 1.5rem;
+}
+.Home-main-text-title {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+}
+@media (max-width: 600px) {
+  .Home-social-icons {
+    width: 100%;
+  }
+  .Home-main-text-description {
+    font-size: 1rem;
+  }
+  .Home-main-text-title {
+    font-size: 1.5rem;
+  }
+  .Home-container {
+    justify-content: flex-start;
+  }
+  .Home-main-text {
+    width: 60%;
+    margin-top: 90px;
+  }
+  .Home-divider {
+    height: 1px;
+  }
+}
+@function generate-random-stars($screen-width, $color, $density) {
+  $h-shadow: random($screen-width);
+  $v-shadow: random($screen-width);
+
+  $stars: "#{$h-shadow}px #{$v-shadow}px #{$color}";
+  @for $i from 2 through $density {
+    $h-shadow: random($screen-width);
+    $v-shadow: random($screen-width);
+    $stars: "#{$stars}, #{$h-shadow}px #{$v-shadow}px #{$color}";
+  }
+  @return unquote($stars);
+}
+
+@mixin stars-content($screen-width, $color, $density, $speed, $delay) {
+  width: 2px;
+  height: 2px;
+  border-radius: 100%;
+  opacity: 0;
+  box-shadow: generate-random-stars($screen-width, $color, $density);
+  animation-name: glowing-stars;
+  animation-duration: $speed + s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-delay: $delay + s;
+}
+
+#stars-group-1 {
+  @include stars-content(1800, #fff, 200, 1, 0);
+}
+
+#stars-group-2 {
+  @include stars-content(1800, #fff, 200, 1, 0.1);
+}
+
+#stars-group-3 {
+  @include stars-content(1800, #fff, 200, 1, 0.2);
+}
+
+#stars-group-4 {
+  @include stars-content(1800, #fff, 200, 1, 0.3);
+}
+
+#stars-group-5 {
+  @include stars-content(1800, #fff, 200, 1, 0.4);
+}
+
+#stars-group-6 {
+  @include stars-content(1800, #fff, 200, 1, 0.5);
+}
+
+@keyframes glowing-stars {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
