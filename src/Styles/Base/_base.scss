@@ -1,15 +1,31 @@
 @import './settings';
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
+
 body,html {
     width: 100vw;
     height: 100vh;
 }
+
 body,
 html>div{
     overflow-x:hidden;
+}
+
+.pointer{
+    cursor:pointer;
+}
+
+.y-translate{
+    transition:transform 0.4s;
+}
+
+.y-translate:hover{
+    transform:translateY(-3px)
 }

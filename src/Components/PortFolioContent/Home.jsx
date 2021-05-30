@@ -5,7 +5,7 @@ const Home = () => {
     <div className="Home-container animate__animated animate__fadeIn">
       <div className="Home-main-text">
         <h1 className="Home-main-text-title">
-        Hi, Im Jhonn Calderon !
+          Hi, Im Jhonn Calderon !
         </h1>
         <p className="Home-main-text-description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
@@ -15,7 +15,7 @@ const Home = () => {
         </p>
         <div className="Home-divider"></div>
         <div className="Home-social-icons">
-          <GithubOutlined /> <LinkedinOutlined />
+          <GithubOutlined className="pointer y-translate" /> <LinkedinOutlined className="pointer y-translate" />
         </div>
       </div>
     </div>
