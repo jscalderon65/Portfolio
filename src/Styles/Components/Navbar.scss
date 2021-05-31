@@ -1,67 +1,68 @@
-@import './MainContainer';
-.Navbar-container{
-  border:solid;
+@import "./MainContainer";
+.Navbar-container {
+  border: solid;
   height: 100%;
-  width: $navbar-width; 
-  position: fixed; 
-  z-index: 1; 
+  width: $navbar-width;
+  position: fixed;
+  z-index: 1;
 
-  top: 0; 
+  top: 0;
   left: 0;
-  display:flex; 
+  display: flex;
   justify-content: center;
-  align-items:center;
-  flex-flow:column;
+  align-items: center;
+  flex-flow: column;
   background-color: black;
-  box-shadow: 2px 2px 10px rgba(0,0,0,.2);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
-.Navbar-menu{
-  color:white;
-  width:100%;
-  display:flex; 
-  flex-direction:column;
-  height:50%;
-}
-.Navbar-menu-item-active{
-  background:white;
-  color:black !important;
-}
-.Navbar-menu-main-info{
-  flex:1;
-  color:white;
-  font-size:5rem;
-  width:100%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-.Navbar-menu-item{
-  font-size:2rem;
-  font-weight: 900;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex:1;
-  color:white;
-  transition:transform 0.3s;
-}
-.Navbar-menu-item:hover{
-  color:white;
-  transform:translateY(-3px);
-}
-.Navbar-container>h1{
-  color:white !important;
-}
-.Navbar-menu-copy-right{
-  font-size:1rem;
-  padding:10px;
-  font-weight: 900;
-  color:white;
-  flex-flow:column;
-  flex:1;
+.Navbar-menu {
+  color: white;
   width: 100%;
-  text-align:center;
-  display:flex;
-  justify-content:flex-end;
-  align-items:center;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+}
+.Navbar-menu-item-active {
+  background: white;
+  color: black !important;
+}
+.Navbar-menu-main-info {
+  flex: 1;
+  color: white;
+  font-size: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Navbar-menu-item {
+  font-size: 2rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: white;
+  transition: transform 0.3s;
+}
+.Navbar-menu-item:hover {
+  color: white;
+  transform: translateY(-3px);
+}
+.Navbar-container > h1 {
+  color: white !important;
+}
+.Navbar-menu-copy-right {
+  font-size: 1rem;
+  padding: 10px;
+  font-weight: 900;
+  color: white;
+  flex-flow: column;
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
 }

@@ -5,15 +5,15 @@
   color: white;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
-  rgba(0, 0, 0, 0.5)),
-  url("./Assets/homeBackground.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./Assets/homeBackground.jpg");
+  flex-direction: column;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
 }
 .Home-main-text {
+  position: fixed;
   display: flex;
   color: white;
   justify-content: center;
@@ -35,7 +35,12 @@
   margin-top: 10px;
   margin-bottom: 10px;
   background: blue;
-  background: linear-gradient(90deg, hsl(0, 0%, 20%), hsl(0, 0%, 70%), hsl(0, 0%, 20%));
+  background: linear-gradient(
+    90deg,
+    hsl(0, 0%, 20%),
+    hsl(0, 0%, 70%),
+    hsl(0, 0%, 20%)
+  );
 }
 .Home-main-text-description {
   color: white;
@@ -48,7 +53,13 @@
   font-size: 3rem;
   font-weight: 900;
 }
+.Home-stars {
+  display: hidden;
+}
 @media (max-width: 600px) {
+  .Home-stars {
+    display: inline;
+  }
   .Home-social-icons {
     width: 100%;
   }
@@ -60,10 +71,11 @@
   }
   .Home-container {
     justify-content: flex-start;
+    overflow-y: hidden !important;
   }
   .Home-main-text {
     width: 60%;
-    margin-top: 90px;
+    margin-top: 100px;
   }
   .Home-divider {
     height: 1px;

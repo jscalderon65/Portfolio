@@ -2,17 +2,19 @@ import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 const Navbar = () => {
   const { pathname } = useLocation();
+  const onOpenWindow = () => {
+    window.open("https://github.com/jscalderon65");
+  };
   return (
     <div className="MainContainer-navbar">
       <div className="Navbar-container">
         <div className="Navbar-menu-main-info">
           <i class="fas fa-code"></i>
-          {pathname === "/home" ? 
-          <>
-          <div id="stars-group-1"></div> 
-          <div id="stars-group-6"></div> 
-          </>
-          : null}
+          {pathname === "/home" ? (
+            <>
+              <div id="stars-group-1"></div>
+            </>
+          ) : null}
         </div>
         <div className="Navbar-menu">
           <NavLink
@@ -44,7 +46,7 @@ const Navbar = () => {
             Contact
           </NavLink>
         </div>
-        <div className="Navbar-menu-copy-right">
+        <div className="Navbar-menu-copy-right" onClick={onOpenWindow}>
           <div className="Home-divider"></div>© Copyright 2021 jscalderon65
         </div>
       </div>
