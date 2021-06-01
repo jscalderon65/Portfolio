@@ -1,0 +1,14 @@
+.Contact-container {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("./Assets/IMG5.jpg");
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-position: center;
+  }

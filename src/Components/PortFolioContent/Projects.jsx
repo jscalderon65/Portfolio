@@ -10,22 +10,25 @@ const Projects = () => {
     scroll.scrollToTop();
   }, []);
   console.log(Data);
-  return Data && Data[0]?.PublicProjects ? (
-    <div className="Projects-projects-card-container">
-      {Data &&
-        Data[0].PublicProjects.map((item) => (
-          <div key={item.id} className="Projects-projects-cards">
-            {item.name}
-            <br />
-            {item.topics.map((topic) => (
-              <li key={topic}>{topic}</li>
-            ))}
-          </div>
-        ))}
-    </div>
-  ) : (
-    <h1>Wait</h1>
-  );
+  return (
+  <div className="Project-container">
+    {Data && Data[0]?.PublicProjects ? (
+      <div className="Projects-projects-card-container">
+        {Data &&
+          Data[0].PublicProjects.map((item) => (
+            <div key={item.id} className="Projects-projects-cards">
+              {item.name}
+              <br />
+              {item.topics.map((topic) => (
+                <li key={topic}>{topic}</li>
+              ))}
+            </div>
+          ))}
+      </div>
+    ) : (
+      <h1>Wait</h1>
+    )}
+  </div>)
 };
 
 export default Projects;
