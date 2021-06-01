@@ -29,7 +29,7 @@ const Navbar = () => {
             className="Navbar-menu-item"
             activeClassName="Navbar-menu-item-active"
           >
-            About
+            About me
           </NavLink>
           <NavLink
             to="/projects"

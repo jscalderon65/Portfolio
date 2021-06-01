@@ -1,11 +1,14 @@
-import React from 'react'
-
+import React, { useEffect } from "react";
+import { animateScroll as scroll } from "react-scroll";
 const Contact = () => {
-    return (
-        <div className="Contact-container animate__animated animate__fadeIn">
-           <h1> Hola </h1>
-        </div>
-    )
-}
+  useEffect(() => {
+    scroll.scrollToTop();
+  }, []);
+  return (
+    <div className="Contact-container animate__animated animate__fadeIn">
+      <h1> Hola </h1>
+    </div>
+  );
+};
 
-export default Contact
+export default Contact;

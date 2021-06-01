@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Spin } from 'antd';
 import { firebase } from "../../Firebase/FirebaseConfig";
 import { useOnSnapshotCollection } from "my-customhook-collection";
 import { animateScroll as scroll } from "react-scroll";
@@ -11,7 +12,7 @@ const Projects = () => {
   }, []);
   console.log(Data);
   return (
-  <div className="Project-container">
+  <div className="Project-container animate__animated animate__fadeIn">
     {Data && Data[0]?.PublicProjects ? (
       <div className="Projects-projects-card-container">
         {Data &&
@@ -26,7 +27,9 @@ const Projects = () => {
           ))}
       </div>
     ) : (
-      <h1>Wait</h1>
+      <div className="Project-container-spinner animate__animated animate__fadeIn">
+        <Spin size="large"/>
+      </div>
     )}
   </div>)
 };
