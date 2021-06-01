@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { GoogleAuth } from "../../Firebase/FirebaseAuth";
 const Navbar = () => {
   const { pathname } = useLocation();
   const onOpenWindow = () => {
@@ -46,8 +47,8 @@ const Navbar = () => {
             Contact
           </NavLink>
         </div>
-        <div className="Navbar-menu-copy-right" onClick={onOpenWindow}>
-          <div className="Home-divider"></div>© Copyright 2021 jscalderon65
+        <div className="Navbar-menu-copy-right">
+          <div className="Home-divider" onClick={GoogleAuth}></div>© Copyright 2021 jscalderon65
         </div>
       </div>
     </div>

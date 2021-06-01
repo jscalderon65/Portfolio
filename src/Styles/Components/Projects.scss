@@ -27,15 +27,42 @@
     padding:20px 20px;
     display: grid;
     justify-content: center;
-    grid-auto-rows:300px;
+    grid-auto-rows:1fr;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fill,minmax(300px,400px));
 }
 .Projects-projects-cards{
+    background-color:rgba(0,0,0,.8) ;
+    padding:10px;
     border-radius: 10px;
+    color:white;
     display: flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
     box-shadow: 2px 2px 10px rgba(0,0,0,.20);
+    display:grid;
+    grid-auto-rows:1fr;
+    transition: transform 0.3s;
+    cursor:pointer;
+}
+.Projects-projects-cards:hover{
+  transform: translateY(-3px);
+}
+.Projects-projects-cards-title{
+  font-size:1.5rem;
+  font-weight: 900;
+  text-align:center;
+}
+.Projects-projects-cards-buttons{
+  text-align:center;
+}
+.Projects-projects-cards-description{
+  
+  text-align:justify;
+  font-weight: 900;
+}
+.Projects-projects-cards-topics{
+  
+  font-weight: 900;
 }
