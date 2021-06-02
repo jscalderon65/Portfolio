@@ -5,6 +5,12 @@ const Home = () => {
   useEffect(() => {
     scroll.scrollToTop();
   }, []);
+  const onGitHub = ()=>{
+    window.open("https://github.com/jscalderon65");
+  }
+  const onLinkedin = ()=>{
+    window.open("https://github.com/jscalderon65");
+  }
   return (
     <div className="Home-container animate__animated animate__fadeIn">
       <div id="stars-group-1" className="Home-stars"></div>
@@ -18,8 +24,8 @@ const Home = () => {
         </p>
         <div className="Home-divider"></div>
         <div className="Home-social-icons">
-          <GithubOutlined className="pointer y-translate" />{" "}
-          <LinkedinOutlined className="pointer y-translate" />
+          <GithubOutlined onClick={onGitHub} className="pointer y-translate" />{" "}
+          <LinkedinOutlined onClick={onLinkedin} className="pointer y-translate" />
         </div>
       </div>
     </div>

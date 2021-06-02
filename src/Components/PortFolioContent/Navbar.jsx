@@ -3,15 +3,12 @@ import { NavLink, useLocation } from "react-router-dom";
 import { GoogleAuth } from "../../Firebase/FirebaseAuth";
 const Navbar = () => {
   const { pathname } = useLocation();
-  const onOpenWindow = () => {
-    window.open("https://github.com/jscalderon65");
-  };
   return (
     <div className="MainContainer-navbar">
       <div className="Navbar-container">
         <div className="Navbar-menu-main-info">
           <i class="fas fa-code"></i>
-          {pathname === "/home" ? (
+          {pathname === "/home" || pathname === "/contact" ? (
             <>
               <div id="stars-group-1"></div>
             </>
@@ -48,7 +45,8 @@ const Navbar = () => {
           </NavLink>
         </div>
         <div className="Navbar-menu-copy-right">
-          <div className="Home-divider" onClick={GoogleAuth}></div>© Copyright 2021 jscalderon65
+          <div className="Home-divider" onClick={GoogleAuth}></div>© Copyright
+          2021
         </div>
       </div>
     </div>
