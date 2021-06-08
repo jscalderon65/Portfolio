@@ -11,13 +11,24 @@ const About = () => {
         <div className="About-container-info-description">
           <div className="About-container-info-description-title">About me</div>
           <div className="About-container-info-description-text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
-            aspernatur ad vel minus porro quo, eos illo vitae provident
-            molestiae amet veritatis inventore maxime tempora excepturi
-            reiciendis laudantium quos aliquam! Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Hic aspernatur ad vel minus porro
-            quo, eos illo vitae provident molestiae amet veritatis inventore
-            maxime tempora excepturi reiciendis laudantium quos aliquam!
+            Hi! my name is Jhonn Calderon and I am 22 years old, I am a computer
+            and systems engineering student and I am currently studying the last
+            year of my university career, I am very interested in software
+            development and autonomous learning, my next goals include, finish
+            my degree, increase my skills in mobile development and put in
+            practice the knowledge acquired in my career and individually way in
+            personal projects and job offers.
+            <div className="About-container-info-description-text-language">
+              <p>Language</p>
+              Spanish (Native)
+              <br />
+              English (B1)
+            </div>
+            <div className="About-container-info-description-text-education">
+              <p>Education</p>
+              <b>Computer and systems engineering </b> - Universidad Católica de
+              Colombia (2017 - 2021)
+            </div>
           </div>
         </div>
         <div className="About-container-info-skills">
@@ -70,10 +81,10 @@ const About = () => {
             <div> Backend</div>
             <div>
               <Tag color="#78C839" style={{ color: "white", fontSize: "1rem" }}>
-                Node
+                Node Js
               </Tag>
               <Tag color="#3E3F35" style={{ color: "white", fontSize: "1rem" }}>
-                Express
+                Express Js
               </Tag>
             </div>
           </div>

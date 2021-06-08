@@ -43,7 +43,7 @@
 .About-container-info-description-text{
   font-size:1rem;
   text-align: justify;
-
+  padding:20px;
   
 }
 .About-container-info-skills{
@@ -63,7 +63,6 @@
 .About-container-info-skills-item{
   display:grid;
   grid-gap: 5px;
-  box-shadow:2px 2px 10px rgba(0, 0, 0, 0.5);
   padding:10px;
   border-radius:10px;
   grid-template-rows: 1fr 2fr;
@@ -84,4 +83,28 @@
     margin-left: 0px;
     margin-top: 2.5px;
   }
+}
+.About-container-info-description-text-education{
+  padding:20px;
+  margin-top:10px;
+  margin-bottom:10px;
+  border-radius:10px;
+}
+.About-container-info-description-text-education>p{
+  font-weight:900;
+  font-size:1.5rem; 
+}
+.About-container-info-description-text-language{
+  
+  display:flex;
+  flex-flow:column;
+  padding:20px;
+  margin-top:10px;
+  margin-bottom:10px;
+  border-radius:10px;
+}
+.About-container-info-description-text-language>p{
+  font-weight:900;
+  font-size:1.5rem;
+  
 }
