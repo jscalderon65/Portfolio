@@ -86,6 +86,9 @@ const About = () => {
               <Tag color="#3E3F35" style={{ color: "white", fontSize: "1rem" }}>
                 Express Js
               </Tag>
+              <Tag color="#F7C428" style={{ color: "black", fontSize: "1rem" }}>
+                Firebase Authentication
+              </Tag>
             </div>
           </div>
           <div className="About-container-info-skills-item">
@@ -95,7 +98,7 @@ const About = () => {
                 MongoDB
               </Tag>
               <Tag color="#F7C428" style={{ color: "black", fontSize: "1rem" }}>
-                Firebase
+                Firebase Cloud Firestore
               </Tag>
             </div>
           </div>
