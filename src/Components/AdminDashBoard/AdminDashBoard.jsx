@@ -49,7 +49,7 @@ const AdminDashBoard = memo(() => {
           )
         );
       }
-      console.log(repositorys);
+      /* console.log(repositorys); */
     });
     const aux =
       Data &&
@@ -60,7 +60,7 @@ const AdminDashBoard = memo(() => {
   }, [Data]);
 
   const onChange = (nextTargetDescriptions, e, aux) => {
-    console.log(nextTargetDescriptions, e, aux);
+    /* console.log(nextTargetDescriptions, e, aux); */
     setTargetKeys(nextTargetDescriptions);
   };
 

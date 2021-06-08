@@ -9,7 +9,7 @@ const GoogleAuth = () => {
       if(user.email!==AdminEmail){
         FirebaseLogOut();
       }else{
-        console.log(JSON.stringify(user));
+        console.log("Logged");
       }
     })
     .catch(({ message: errorMessage }) => {
@@ -20,9 +20,6 @@ const FirebaseLogOut = () => {
   firebase
     .auth()
     .signOut()
-    .then(() => {
-      console.log("Se ha cerrado sesión");
-    })
     .catch((error) => console.log(error));
 };
 export { GoogleAuth, FirebaseLogOut };
