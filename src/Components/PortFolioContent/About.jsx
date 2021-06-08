@@ -29,6 +29,18 @@ const About = () => {
               <b>Computer and systems engineering </b> - Universidad Católica de
               Colombia (2017 - 2021)
             </div>
+            <div className="About-container-info-description-text-education">
+              <p>Hobbies</p>
+              Travel
+              <br/>
+              Photography
+              <br/>
+              Cycling
+              <br/>
+              Read
+
+              
+            </div>
           </div>
         </div>
         <div className="About-container-info-skills">

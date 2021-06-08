@@ -56,6 +56,7 @@ const AdminDashBoard = memo(() => {
       Data[0].PublicProjects.reduce((acc, prev) => [...acc, prev.id], []);
     aux && setTargetKeys(aux);
     return () => (isSubscribed = false);
+     // eslint-disable-next-line
   }, [Data]);
 
   const onChange = (nextTargetDescriptions, e, aux) => {
