@@ -9,7 +9,7 @@ const Home = () => {
     window.open("https://github.com/jscalderon65");
   };
   const onLinkedin = () => {
-    window.open("https://github.com/jscalderon65");
+    window.open("https://www.linkedin.com/in/sebasti%C3%A1n-calderon-134354204/");
   };
   return (
     <div className="Home-container animate__animated animate__fadeIn">
