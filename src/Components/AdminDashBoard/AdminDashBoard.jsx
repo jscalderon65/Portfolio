@@ -13,11 +13,11 @@ const AdminDashBoard = memo(() => {
   const mediaQuery = useMediaQuery("(max-width:1000px)");
   const db = firebase.firestore();
   const refColl = db.collection("Portfolio");
-  const [Data] = useOnSnapshotCollection(refColl);
+  const [Data,Loading,Error] = useOnSnapshotCollection(refColl);
   const [targetKeys, setTargetKeys] = useState([]);
   const [selectedKeys, setSelectedKeys] = useState([]);
   const [repositorys, setRepositorys] = useState([]);
-
+  console.log(Data);
   useEffect(() => {
     const getGithubData = async () => {
       try {
@@ -49,18 +49,15 @@ const AdminDashBoard = memo(() => {
           )
         );
       }
-      /* console.log(repositorys); */
+      console.log(repositorys);
     });
-    const aux =
-      Data &&
-      Data[0].PublicProjects.reduce((acc, prev) => [...acc, prev.id], []);
+    const aux = Data[0]?.PublicProjects.reduce((acc, prev) => [...acc, prev.id], []);
     aux && setTargetKeys(aux);
     return () => (isSubscribed = false);
-     // eslint-disable-next-line
+    // eslint-disable-next-line
   }, [Data]);
-
+  console.log(Data)
   const onChange = (nextTargetDescriptions, e, aux) => {
-    /* console.log(nextTargetDescriptions, e, aux); */
     setTargetKeys(nextTargetDescriptions);
   };
 
@@ -85,7 +82,7 @@ const AdminDashBoard = memo(() => {
   };
 
   return (
-    <div className="pageBody" style={{ height: "100vh" }}>
+    <div className="pageBody" style={{ minHeight: "100vh",height:"auto" }}>
       <PageHeader
         style={{ color: "white" }}
         title={

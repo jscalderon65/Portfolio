@@ -3,13 +3,15 @@ import "firebase/firestore";
 import "firebase/auth";
 
 firebase.initializeApp({
-  apiKey: "AIzaSyBsFz02u7xxRT0OrYW35Vrw348jfe59T58",
-  authDomain: "test-zone-aaf7f.firebaseapp.com",
-  projectId: "test-zone-aaf7f",
-  storageBucket: "test-zone-aaf7f.appspot.com",
-  messagingSenderId: "771873891143",
-  appId: "1:771873891143:web:e426d65417e92cc0aea262",
-  measurementId: "G-JQ73D1J33M"
+  apiKey: "AIzaSyD8FvyJKPX-VqQgEDx_mxchzMShfoFDAbg",
+  authDomain: "portfolio-1f2e9.firebaseapp.com",
+  databaseURL: "https://portfolio-1f2e9-default-rtdb.firebaseio.com",
+  projectId: "portfolio-1f2e9",
+  storageBucket: "portfolio-1f2e9.appspot.com",
+  messagingSenderId: "962989852779",
+  appId: "1:962989852779:web:1de67b8015b0d0361f092e",
+  measurementId: "G-P68W5LFXBG",
 });
+
 const db = firebase.firestore();
-export {db,firebase};
+export { db, firebase };

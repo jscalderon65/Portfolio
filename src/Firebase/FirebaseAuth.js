@@ -1,14 +1,14 @@
 import { firebase } from "./FirebaseConfig";
 const GoogleAuth = () => {
   const provider_Google = new firebase.auth.GoogleAuthProvider();
-  const AdminEmail = process.env.REACT_APP_ADMIN_EMAIL;
+  const AdminEmail = "jhonnseca0599@gmail.com";
   firebase
     .auth()
     .signInWithPopup(provider_Google)
     .then(({ user }) => {
-      if(user.email!==AdminEmail){
+      if (user.email !== AdminEmail) {
         FirebaseLogOut();
-      }else{
+      } else {
         console.log("Logged");
       }
     })
